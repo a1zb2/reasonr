@@ -13,7 +13,7 @@ GRPO fixed 227 questions the base model got wrong and broke 128 it got right. Mc
 <!-- TODO: record the demo (scrub the slider on Q1 and Q2) and save as assets/demo.gif, then uncomment -->
 <!-- ![Watch it learn demo](assets/demo.gif) -->
 
-**Live demo:** coming soon <!-- TODO: replace with the Vercel URL -->. Compare base and trained answers side by side (including the questions GRPO broke), or drag a slider across 1,000 training steps and watch answers change.
+**Live demo:** [reasonr-one.vercel.app](https://reasonr-one.vercel.app). Compare base and trained answers side by side (including the questions GRPO broke), or drag a slider across 1,000 training steps and watch answers change.
 
 ## Before / after
 
