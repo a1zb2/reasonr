@@ -1,0 +1,22 @@
+# Model weights go to Hugging Face, not git
+results/final_adapter/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.vercel/
+*.tsbuildinfo
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.env*
+
+# Local files that are not part of the project
+Claude outputs/

@@ -1,0 +1,14 @@
+{
+  "base": {
+    "label": "base",
+    "accuracy": 0.41546626231993933,
+    "format_rate": 0.0,
+    "avg_len_chars": 770.8316906747536
+  },
+  "grpo": {
+    "label": "grpo",
+    "accuracy": 0.49052312357846856,
+    "format_rate": 0.9962092494313874,
+    "avg_len_chars": 436.85291887793784
+  }
+}

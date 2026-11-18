@@ -1,0 +1,148 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: light;
+  --bg: #f6f6f4;
+  --surface: #ffffff;
+  --line: #e2e1dc;
+  --grid: #ecebe7;
+  --ink: #121211;
+  --ink-2: #3f3e3b;
+  --ink-3: #6f6e69;
+  --accent: #2a78d6;
+  --accent-soft: #eaf2fc;
+  --accent-ink: #1c5fae;
+  --on-accent: #ffffff;
+  --think: #7b6be0;
+  --think-soft: #f3f1fd;
+  --think-ink: #5443c4;
+  --good: #1a7f37;
+  --good-soft: #e3f3e7;
+  --bad: #c4312f;
+  --bad-soft: #fbe9e8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #111110;
+    --surface: #1a1a19;
+    --line: #2e2e2b;
+    --grid: #262624;
+    --ink: #f0efec;
+    --ink-2: #cfcec7;
+    --ink-3: #94938b;
+    --accent: #3987e5;
+    --accent-soft: #15253a;
+    --accent-ink: #8dbbf2;
+    --on-accent: #ffffff;
+    --think: #9085e9;
+    --think-soft: #1f1d31;
+    --think-ink: #b7aef5;
+    --good: #4cc27a;
+    --good-soft: #13291b;
+    --bad: #f07272;
+    --bad-soft: #351818;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-ink: var(--accent-ink);
+  --color-on-accent: var(--on-accent);
+  --color-think: var(--think);
+  --color-think-soft: var(--think-soft);
+  --color-think-ink: var(--think-ink);
+  --color-good: var(--good);
+  --color-good-soft: var(--good-soft);
+  --color-bad: var(--bad);
+  --color-bad-soft: var(--bad-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+/* KaTeX: keep math in the surrounding ink color, a touch smaller than default */
+.katex {
+  font-size: 1.05em;
+}
+.katex-block .katex-display {
+  margin: 0;
+}
+
+/* Training-step slider. Thumb is 18px; the dot row underneath is padded by 9px to line up. */
+input[type="range"].scrub {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 22px;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"].scrub:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+input[type="range"].scrub::-webkit-slider-runnable-track {
+  height: 6px;
+  border-radius: 999px;
+  background: linear-gradient(to right, var(--accent) var(--pct), var(--line) var(--pct));
+}
+input[type="range"].scrub::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  margin-top: -6px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+input[type="range"].scrub::-moz-range-track {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--line);
+}
+input[type="range"].scrub::-moz-range-progress {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+input[type="range"].scrub::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+  border: 3px solid var(--surface);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+.fade-in {
+  animation: fade-in 220ms ease-out;
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-in {
+    animation: none;
+  }
+}
